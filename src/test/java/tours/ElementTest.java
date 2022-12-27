@@ -26,6 +26,7 @@ public class ElementTest {
         element(By.id("domain")).setValue("Sabre");
         element(By.id("group")).setValue("secsys");
         $(By.id("submit")).click();
+
         $(By.id("submit")).shouldNotBe(Condition.visible);
         element(shadowCss("#fileInput", "vaadin-upload")).uploadFromClasspath("auto_gen_file11478176541350344393.csv");
         element(By.id("csv-validation-message")).shouldHave(Condition.exactText("File uploaded successfully."));
